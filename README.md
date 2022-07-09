@@ -11,4 +11,4 @@
 
 | 구분 | 문제이름 | 난이도 | 풀이 날짜 | 다시풀 문제|
 |---|:---:|:---:|:---:|:---:|
-| 자료구조 | [팩토리얼](https://www.acmicpc.net/problem/10872) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/1.svg"/> | 22.07.09 | X |
+| 재귀 | [팩토리얼](https://www.acmicpc.net/problem/10872) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/1.svg"/> | 22.07.09 | X |
