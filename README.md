@@ -1,6 +1,6 @@
 # DataStructure
 ### :pencil2:  자료구조 공부를 위한 개인 레포지토리
-#### 사용 언어 : <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white"/>
+#### 사용 언어 : <img src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=Java&logoColor=white"/>
 #### 문제 참고 
  > Baekjoon
 ***
