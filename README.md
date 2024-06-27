@@ -16,7 +16,7 @@
 | 배열 | [평균 구하기](https://www.acmicpc.net/problem/1546) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/5.svg"/> | 24.05.03 | X |
 | 배열 | [구간합 구하기⭐](https://www.acmicpc.net/problem/11659) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | 24.05.10 | O |
 | 배열 | [구간합 구하기2⭐](https://www.acmicpc.net/problem/11660) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | 24.05.10 | O |
-| 배열 | [나머지 합 구하기⭐](https://www.acmicpc.net/problem/10986) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | 24.06.27 | O |
+| 배열 | [나머지 합 구하기⭐](https://www.acmicpc.net/problem/10986) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | 24.06.27 | O |
 
 
 
