@@ -18,7 +18,8 @@
 | 배열 | [구간합 구하기2⭐](https://www.acmicpc.net/problem/11660) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | 24.05.10 | O |
 | 배열 | [나머지 합 구하기⭐](https://www.acmicpc.net/problem/10986) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | 24.06.27 | O |
 | 배열 | [좋은 수](https://www.acmicpc.net/problem/1253) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | 24.12.29 | O |
-| 배열 | [주몽](https://www.acmicpc.net/problem/1940) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | 24.12.29 | O |
+| 투 포인터 | [주몽](https://www.acmicpc.net/problem/1940) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | 24.12.29 | O |
+| 투 포인터 | [수들의합](https://www.acmicpc.net/problem/2018) | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | 24.12.29 | O |
 
 
 
