@@ -18,8 +18,24 @@ readme_template = """
 """
 
 # Git 커밋 날짜 가져오기
+# Git 커밋 날짜 가져오기
 def get_git_commit_date(file_path):
     try:
+        # 절대 경로로 변환
+        file_path = os.path.abspath(file_path)
+        
+        # 파일이 Git에 트랙킹되었는지 확인
+        result = subprocess.run(
+            ["git", "ls-files", "--error-unmatch", file_path],
+            cwd=repo_path,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        if result.returncode != 0:  # Git에 포함되지 않은 파일
+            return "Unknown"
+
+        # Git 커밋 날짜 가져오기
         result = subprocess.run(
             ["git", "log", "-1", "--format=%ci", file_path],
             cwd=repo_path,
@@ -27,7 +43,7 @@ def get_git_commit_date(file_path):
             text=True,
             check=True
         )
-        commit_date = result.stdout.strip().split(" ")[0]  # 날짜 부분만 추출
+        commit_date = result.stdout.strip().split(" ")[0]  # 날짜만 추출
         return commit_date
     except Exception as e:
         print(f"Git 커밋 날짜를 가져오는 중 오류 발생: {e}")
