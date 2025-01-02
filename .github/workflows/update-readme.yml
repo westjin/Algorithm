@@ -18,14 +18,19 @@ jobs:
         with:
           python-version: "3.9"
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || echo "No requirements file"
+
       - name: Run update script
         run: |
-          python update_readme.py || echo "Python script encountered an error but continuing workflow"
+          python ./update_readme.py || echo "Script failed"
 
       - name: Commit and push changes
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git add README.md
-          git commit -m "Update README with solved problems" || echo "No changes to commit"
+          git commit -m "Update README" || echo "Nothing to commit"
           git push
