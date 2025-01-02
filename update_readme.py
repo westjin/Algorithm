@@ -49,19 +49,24 @@ def get_manual_tags(problem_number, platform):
 
 # 문제 번호 및 난이도 추출
 def extract_problem_data(root, folder_name, platform):
-    if platform == "백준":
-        difficulty = os.path.basename(os.path.dirname(root))  # 난이도 (Bronze, Silver 등)
-        problem_number = folder_name.split(".")[0]  # 문제 번호
-        return problem_number, difficulty
-    elif platform == "프로그래머스":
-        level = os.path.basename(os.path.dirname(root))  # Level 1, Level 2
-        problem_number = folder_name.split(".")[0]  # 문제 번호
-        return problem_number, f"Level {level}"
-    return None, "Unknown"
+    try:
+        if platform == "백준":
+            difficulty = os.path.basename(os.path.dirname(root))  # 난이도 (Bronze, Silver 등)
+            problem_number = folder_name.split(".")[0]  # 문제 번호
+            return problem_number, difficulty
+        elif platform == "프로그래머스":
+            level = os.path.basename(os.path.dirname(root))  # Level 1, Level 2
+            problem_number = folder_name.split(".")[0]  # 문제 번호
+            return problem_number, f"Level {level}"
+    except Exception as e:
+        print(f"문제 데이터 추출 오류: {e}")
+        return None, "Unknown"
 
-# 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
     problem_dict = {}
+    if not os.path.exists(base_path):
+        print(f"경로가 존재하지 않습니다: {base_path}")
+        return problem_dict
 
     for root, dirs, files in os.walk(base_path):
         for folder in dirs:  # 디렉토리 이름을 기준으로 문제 번호와 난이도 추출
@@ -74,6 +79,7 @@ def classify_and_filter_problems(base_path, platform):
             # 파일 경로에서 커밋 날짜 가져오기
             files_in_folder = os.listdir(folder_path)
             if not files_in_folder:
+                print(f"폴더가 비어 있습니다: {folder_path}")
                 continue  # 폴더가 비어 있는 경우 스킵
             file_path = os.path.join(folder_path, files_in_folder[0])  # 첫 번째 파일 경로
 
