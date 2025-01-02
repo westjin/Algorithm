@@ -58,7 +58,6 @@ def extract_problem_data(root, folder_name, platform):
         return problem_number, f"Level {level}"
     return None, "Unknown"
 
-# 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
     problem_dict = {}
 
@@ -68,8 +67,11 @@ def classify_and_filter_problems(base_path, platform):
             folder_path = os.path.join(root, folder)
             file_path = os.path.join(folder_path, os.listdir(folder_path)[0])  # 첫 번째 파일 추출
 
+            # 디렉토리 이름에서 문제 이름 추출
+            problem_name = folder.split(".")[1].strip() if "." in folder else "Unknown"
+
             problem_dict[problem_number] = {
-                "name": folder.split(".")[1].strip(),
+                "name": problem_name,
                 "link": f"https://www.acmicpc.net/problem/{problem_number}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_number}",
                 "date": get_git_commit_date(file_path),
                 "difficulty": difficulty,
