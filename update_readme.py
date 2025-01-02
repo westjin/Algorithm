@@ -21,13 +21,13 @@ def get_file_creation_date(file_path):
     timestamp = os.path.getmtime(file_path)  # 파일 수정 시간 기준
     return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
 
-# 난이도 추출
-def get_difficulty_from_path(root):
-    # 난이도 추출 (예: "Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3")
-    difficulties = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3"]
-    for difficulty in difficulties:
-        if difficulty in root:
-            return difficulty
+# 프로그래머스 난이도 추출
+def get_programmers_level_from_path(root):
+    # 폴더 이름이 "1/문제번호" 형식일 경우 "1"을 이용해 Level 1로 설정
+    level_mapping = {"1": "Level 1", "2": "Level 2", "3": "Level 3"}
+    folder_name = os.path.basename(os.path.dirname(root))  # 상위 폴더 이름
+    if folder_name in level_mapping:
+        return level_mapping[folder_name]
     return "Unknown"
 
 # 문제 목록 생성
@@ -45,13 +45,18 @@ def classify_and_filter_problems(base_path, platform):
                 file_path = os.path.join(root, file)
 
                 # 난이도 추출
-                difficulty = get_difficulty_from_path(root)
+                if platform == "백준":
+                    difficulty = os.path.basename(root)  # 예: "Bronze", "Silver"
+                elif platform == "프로그래머스":
+                    difficulty = get_programmers_level_from_path(root)
+                else:
+                    difficulty = "Unknown"
 
                 # 중복 제거
                 if problem_name not in problem_dict:
                     problem_dict[problem_name] = {
                         "name": problem_name,
-                        "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name}",
+                        "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
                         "date": get_file_creation_date(file_path),
                         "difficulty": difficulty,
                         "solved": "O",
