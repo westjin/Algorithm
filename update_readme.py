@@ -1,5 +1,6 @@
 import os
 import subprocess
+from datetime import datetime
 
 # 저장소 경로와 README 파일 경로 설정
 repo_path = "./"  # 저장소 루트 경로
