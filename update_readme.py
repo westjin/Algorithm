@@ -36,20 +36,17 @@ def get_git_commit_date(file_path):
 # 수동으로 태그 관리
 def get_manual_tags(problem_name, platform):
     manual_tags = {
-        # 백준 문제 태그 (수동 입력)
         "백준": {
             "11286": "우선순위 큐, 정렬",
             "12891": "문자열, 슬라이딩 윈도우",
-            # 추가 태그를 여기 추가
         },
-        # 프로그래머스 문제 태그 (수동 입력)
         "프로그래머스": {
             "12906": "스택, 큐",
             "42586": "스택, 큐, 구현",
-            # 추가 태그를 여기 추가
         },
     }
-    return manual_tags.get(platform, {}).get(problem_name, "미분류")
+    problem_number = problem_name.split(".")[0]  # 문제 번호만 추출
+    return manual_tags.get(platform, {}).get(problem_number, "미분류")
 
 # 백준 난이도 추출
 def get_baekjoon_difficulty(root):
@@ -57,6 +54,16 @@ def get_baekjoon_difficulty(root):
     for difficulty in difficulties:
         if difficulty in root:
             return difficulty
+    return "Unknown"
+
+# 프로그래머스 레벨 추출
+def get_programmers_level(root):
+    if root.startswith("1/"):
+        return "Level 1"
+    elif root.startswith("2/"):
+        return "Level 2"
+    elif root.startswith("3/"):
+        return "Level 3"
     return "Unknown"
 
 # 문제 목록 생성
@@ -69,14 +76,14 @@ def classify_and_filter_problems(base_path, platform):
                 if file == "README.md":  # README 제외
                     continue
 
-                problem_name = os.path.splitext(file)[0]
+                problem_name = os.path.splitext(file)[0]  # 파일명에서 확장자 제거
                 file_path = os.path.join(root, file)
 
                 if platform == "백준":
                     difficulty = get_baekjoon_difficulty(root)
                     tags = get_manual_tags(problem_name, platform)  # 수동 태그 관리
                 elif platform == "프로그래머스":
-                    difficulty = root.split("/")[0]  # Level 구분
+                    difficulty = get_programmers_level(root)
                     tags = get_manual_tags(problem_name, platform)  # 수동 태그 관리
                 else:
                     difficulty = "Unknown"
@@ -85,7 +92,7 @@ def classify_and_filter_problems(base_path, platform):
                 if problem_name not in problem_dict:
                     problem_dict[problem_name] = {
                         "name": problem_name,
-                        "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
+                        "link": f"https://www.acmicpc.net/problem/{problem_name.split('.')[0]}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
                         "date": get_git_commit_date(file_path),
                         "difficulty": difficulty,
                         "tags": tags,
