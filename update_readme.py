@@ -1,4 +1,5 @@
 import os
+import requests
 import subprocess
 from datetime import datetime
 
@@ -17,15 +18,33 @@ readme_template = """
 ## 📝 해결한 문제들
 """
 
-# 파일 생성 날짜 가져오기 (macOS)
-def get_file_creation_date(file_path):
+# solved.ac API를 통해 분류 태그 가져오기
+def get_baekjoon_tags(problem_number):
+    url = f"https://solved.ac/api/v3/problem/show?problemId={problem_number}"
     try:
-        # macOS의 `stat` 명령어로 파일 생성 날짜 가져오기
-        result = subprocess.run(["stat", "-f", "%B", file_path], stdout=subprocess.PIPE, text=True, check=True)
-        creation_time = int(result.stdout.strip())
-        return datetime.fromtimestamp(creation_time).strftime("%Y-%m-%d")
+        response = requests.get(url)
+        response.raise_for_status()  # HTTP 에러 확인
+        data = response.json()
+        tags = [tag['displayName'] for tag in data.get("tags", [])]  # 태그 이름 추출
+        return ", ".join(tags) if tags else "미분류"
     except Exception as e:
-        print(f"파일 생성 날짜를 가져오는 중 오류 발생: {e}")
+        print(f"solved.ac API 에러: {e}")
+        return "미분류"
+
+# Git 커밋 날짜 가져오기
+def get_git_commit_date(file_path):
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%ci", file_path],
+            cwd=repo_path,
+            stdout=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        commit_date = result.stdout.strip().split(" ")[0]  # 날짜 부분만 추출
+        return commit_date
+    except Exception as e:
+        print(f"Git 커밋 날짜를 가져오는 중 오류 발생: {e}")
         return "Unknown"
 
 # 백준 난이도 추출
@@ -35,12 +54,6 @@ def get_baekjoon_difficulty(root):
         if difficulty in root:
             return difficulty
     return "Unknown"
-
-# 프로그래머스 난이도 추출
-def get_programmers_level(root):
-    level_mapping = {"1": "Level 1", "2": "Level 2", "3": "Level 3"}
-    folder_name = os.path.basename(os.path.dirname(root))
-    return level_mapping.get(folder_name, "Unknown")
 
 # 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
@@ -57,17 +70,21 @@ def classify_and_filter_problems(base_path, platform):
 
                 if platform == "백준":
                     difficulty = get_baekjoon_difficulty(root)
+                    tags = get_baekjoon_tags(problem_name)  # 분류 태그 가져오기
                 elif platform == "프로그래머스":
-                    difficulty = get_programmers_level(root)
+                    difficulty = "Level Unknown"
+                    tags = "미분류"
                 else:
                     difficulty = "Unknown"
+                    tags = "미분류"
 
                 if problem_name not in problem_dict:
                     problem_dict[problem_name] = {
                         "name": problem_name,
                         "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
-                        "date": get_file_creation_date(file_path),  # 파일 생성 날짜
+                        "date": get_git_commit_date(file_path),
                         "difficulty": difficulty,
+                        "tags": tags,
                         "solved": "✅",
                     }
 
@@ -82,10 +99,10 @@ def generate_markdown_by_difficulty(problem_dict, platform):
         problems = [p for p in problem_dict.values() if p["difficulty"] == level]
         if problems:
             problem_text += f"#### {level}\n"
-            problem_text += "| **문제** | **풀이 날짜** | **해결 여부** |\n"
-            problem_text += "|----------|---------------|---------------|\n"
+            problem_text += "| **문제** | **분류** | **풀이 날짜** | **해결 여부** |\n"
+            problem_text += "|----------|----------|---------------|---------------|\n"
             for problem in problems:
-                problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['date']} | {problem['solved']} |\n"
+                problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
             problem_text += "\n"
 
     return problem_text
