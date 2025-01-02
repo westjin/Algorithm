@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   update-readme:
@@ -22,4 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip 
+          python -m pip install --upgrade pip  # pip 업데이트
+          pip install requests  # requests 설치
+
+      - name: Run update script
+        run: python update_readme.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add README.md
+          git commit -m "Update README with solved problems"
+          git push
