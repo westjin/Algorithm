@@ -20,16 +20,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip  # pip 업데이트
-          pip install requests  # requests 설치
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run update script
-        run: python update_readme.py
+        run: |
+          python update_readme.py || echo "Python script encountered an error but continuing workflow"
 
       - name: Commit and push changes
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
-          git add README.md
-          git commit -m "Update README with solved problems"
+          git add README.md problem_data_cache.json
+          git commit -m "Update README and cache with solved problems" || echo "No changes to commit"
           git push
