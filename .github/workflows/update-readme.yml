@@ -18,10 +18,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.9"  # Python 버전 지정
+
+      - name: Install dependencies
+        run: pip install requests  # 필요한 라이브러리 설치
 
       - name: Run update script
-        run: python update_readme.py
+        run: python update_readme.py  # Python 스크립트 실행
 
       - name: Commit and push changes
         run: |
