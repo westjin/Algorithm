@@ -26,7 +26,8 @@ def get_git_commit_date(file_path):
             check=True
         )
         return result.stdout.strip().split(" ")[0]  # 날짜 부분만 추출
-    except Exception:
+    except Exception as e:
+        print(f"Git 커밋 날짜 오류: {e}")
         return "Unknown"
 
 # 수동 태그 관리
@@ -53,22 +54,28 @@ def extract_problem_data(root, folder_name, platform):
         problem_number = folder_name.split(".")[0]  # 문제 번호
         return problem_number, difficulty
     elif platform == "프로그래머스":
-        level = root.split("/")[0]  # Level 1, Level 2
+        level = os.path.basename(os.path.dirname(root))  # Level 1, Level 2
         problem_number = folder_name.split(".")[0]  # 문제 번호
         return problem_number, f"Level {level}"
     return None, "Unknown"
 
+# 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
     problem_dict = {}
 
     for root, dirs, files in os.walk(base_path):
         for folder in dirs:  # 디렉토리 이름을 기준으로 문제 번호와 난이도 추출
-            problem_number, difficulty = extract_problem_data(root, folder, platform)
             folder_path = os.path.join(root, folder)
-            file_path = os.path.join(folder_path, os.listdir(folder_path)[0])  # 첫 번째 파일 추출
+            problem_number, difficulty = extract_problem_data(root, folder, platform)
 
             # 디렉토리 이름에서 문제 이름 추출
             problem_name = folder.split(".")[1].strip() if "." in folder else "Unknown"
+
+            # 파일 경로에서 커밋 날짜 가져오기
+            files_in_folder = os.listdir(folder_path)
+            if not files_in_folder:
+                continue  # 폴더가 비어 있는 경우 스킵
+            file_path = os.path.join(folder_path, files_in_folder[0])  # 첫 번째 파일 경로
 
             problem_dict[problem_number] = {
                 "name": problem_name,
@@ -90,10 +97,10 @@ def generate_markdown_by_difficulty(problem_dict, platform):
         problems = [p for p in problem_dict.values() if p["difficulty"] == level]
         if problems:
             problem_text += f"#### {level}\n"
-            problem_text += "| **문제** | **분류** | **풀이 날짜** | **해결 여부** |\n"
-            problem_text += "|----------|----------|---------------|---------------|\n"
-            for problem in problems:
-                problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
+            problem_text += "| **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |\n"
+            problem_text += "|---------------|--------------|----------|---------------|---------------|\n"
+            for problem_number, problem in sorted(problem_dict.items()):
+                problem_text += f"| {problem_number} | [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
             problem_text += "\n"
 
     return problem_text
