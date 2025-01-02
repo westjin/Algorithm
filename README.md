@@ -9,42 +9,32 @@
 ### 📌 백준
 
 #### Bronze
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [수 정렬하기](https://www.acmicpc.net/problem/수 정렬하기) | Unknown | ✅ |
-| [평균](https://www.acmicpc.net/problem/평균) | Unknown | ✅ |
-| [숫자의 합](https://www.acmicpc.net/problem/숫자의 합) | Unknown | ✅ |
+| **문제** | **분류** | **풀이 날짜** | **해결 여부** |
+|----------|----------|---------------|---------------|
+| [수 정렬하기](https://www.acmicpc.net/problem/수 정렬하기) | 미분류 | 2025-01-02 | ✅ |
+| [평균](https://www.acmicpc.net/problem/평균) | 미분류 | 2025-01-02 | ✅ |
+| [숫자의 합](https://www.acmicpc.net/problem/숫자의 합) | 미분류 | 2025-01-02 | ✅ |
 
 #### Silver
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [절댓값 힙](https://www.acmicpc.net/problem/절댓값 힙) | Unknown | ✅ |
-| [DNA 비밀번호](https://www.acmicpc.net/problem/DNA 비밀번호) | Unknown | ✅ |
-| [주몽](https://www.acmicpc.net/problem/주몽) | Unknown | ✅ |
-| [카드2](https://www.acmicpc.net/problem/카드2) | Unknown | ✅ |
-| [구간 합 구하기 4](https://www.acmicpc.net/problem/구간 합 구하기 4) | Unknown | ✅ |
-| [스택 수열](https://www.acmicpc.net/problem/스택 수열) | Unknown | ✅ |
-| [수들의 합 5](https://www.acmicpc.net/problem/수들의 합 5) | Unknown | ✅ |
+| **문제** | **분류** | **풀이 날짜** | **해결 여부** |
+|----------|----------|---------------|---------------|
+| [절댓값 힙](https://www.acmicpc.net/problem/절댓값 힙) | 미분류 | 2025-01-02 | ✅ |
+| [DNA 비밀번호](https://www.acmicpc.net/problem/DNA 비밀번호) | 미분류 | 2025-01-02 | ✅ |
+| [주몽](https://www.acmicpc.net/problem/주몽) | 미분류 | 2025-01-02 | ✅ |
+| [카드2](https://www.acmicpc.net/problem/카드2) | 미분류 | 2025-01-02 | ✅ |
+| [구간 합 구하기 4](https://www.acmicpc.net/problem/구간 합 구하기 4) | 미분류 | 2025-01-02 | ✅ |
+| [스택 수열](https://www.acmicpc.net/problem/스택 수열) | 미분류 | 2025-01-02 | ✅ |
+| [수들의 합 5](https://www.acmicpc.net/problem/수들의 합 5) | 미분류 | 2025-01-02 | ✅ |
 
 #### Gold
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [좋다](https://www.acmicpc.net/problem/좋다) | Unknown | ✅ |
+| **문제** | **분류** | **풀이 날짜** | **해결 여부** |
+|----------|----------|---------------|---------------|
+| [좋다](https://www.acmicpc.net/problem/좋다) | 미분류 | 2025-01-02 | ✅ |
 
 #### Platinum
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [최솟값 찾기](https://www.acmicpc.net/problem/최솟값 찾기) | Unknown | ✅ |
+| **문제** | **분류** | **풀이 날짜** | **해결 여부** |
+|----------|----------|---------------|---------------|
+| [최솟값 찾기](https://www.acmicpc.net/problem/최솟값 찾기) | 미분류 | 2025-01-02 | ✅ |
 
 ### 📌 프로그래머스
-
-#### Level 1
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/같은 숫자는 싫어) | Unknown | ✅ |
-
-#### Level 2
-| **문제** | **풀이 날짜** | **해결 여부** |
-|----------|---------------|---------------|
-| [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/기능개발) | Unknown | ✅ |
 
