@@ -21,14 +21,21 @@ def get_file_creation_date(file_path):
     timestamp = os.path.getmtime(file_path)  # 파일 수정 시간 기준
     return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
 
+# 백준 난이도 추출
+def get_baekjoon_difficulty(root):
+    # 폴더 이름에서 난이도 추출 (예: "Bronze", "Silver")
+    difficulties = ["Bronze", "Silver", "Gold", "Platinum"]
+    for difficulty in difficulties:
+        if difficulty in root:
+            return difficulty
+    return "Unknown"
+
 # 프로그래머스 난이도 추출
-def get_programmers_level_from_path(root):
-    # 폴더 이름이 "1/문제번호" 형식일 경우 "1"을 이용해 Level 1로 설정
+def get_programmers_level(root):
+    # 폴더 이름에서 레벨 추출 (예: "1", "2")
     level_mapping = {"1": "Level 1", "2": "Level 2", "3": "Level 3"}
     folder_name = os.path.basename(os.path.dirname(root))  # 상위 폴더 이름
-    if folder_name in level_mapping:
-        return level_mapping[folder_name]
-    return "Unknown"
+    return level_mapping.get(folder_name, "Unknown")
 
 # 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
@@ -46,9 +53,9 @@ def classify_and_filter_problems(base_path, platform):
 
                 # 난이도 추출
                 if platform == "백준":
-                    difficulty = os.path.basename(root)  # 예: "Bronze", "Silver"
+                    difficulty = get_baekjoon_difficulty(root)
                 elif platform == "프로그래머스":
-                    difficulty = get_programmers_level_from_path(root)
+                    difficulty = get_programmers_level(root)
                 else:
                     difficulty = "Unknown"
 
@@ -59,7 +66,7 @@ def classify_and_filter_problems(base_path, platform):
                         "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
                         "date": get_file_creation_date(file_path),
                         "difficulty": difficulty,
-                        "solved": "O",
+                        "solved": "✅",  # 해결 여부를 직관적으로 표시
                     }
 
     return problem_dict
