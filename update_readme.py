@@ -51,11 +51,11 @@ def get_manual_tags(problem_number, platform):
 def extract_problem_data(root, folder_name, platform):
     try:
         if platform == "백준":
-            difficulty = os.path.basename(os.path.dirname(root))  # 난이도 (Bronze, Silver 등)
+            difficulty = os.path.basename(root)  # 난이도 (Bronze, Silver 등)
             problem_number, problem_name = folder_name.split(".")
             return problem_number.strip(), problem_name.strip(), difficulty
         elif platform == "프로그래머스":
-            level = os.path.basename(os.path.dirname(root))  # Level 1, Level 2
+            level = os.path.basename(root)  # Level 1, Level 2
             problem_number, problem_name = folder_name.split(".")
             return problem_number.strip(), problem_name.strip(), f"Level {level}"
     except Exception as e:
@@ -69,21 +69,18 @@ def classify_and_filter_problems(base_path, platform):
         print(f"경로가 존재하지 않습니다: {base_path}")
         return problem_dict
 
-    for root, dirs, files in os.walk(base_path):
+    for root, dirs, _ in os.walk(base_path):
         for folder in dirs:
             folder_path = os.path.join(root, folder)
             problem_number, problem_name, difficulty = extract_problem_data(root, folder, platform)
 
-            if not problem_number or difficulty not in ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3"]:
+            if not problem_number:
                 continue
 
             files_in_folder = os.listdir(folder_path)
             if not files_in_folder:
                 continue
             file_path = os.path.join(folder_path, files_in_folder[0])
-
-            if problem_number in problem_dict:
-                continue
 
             problem_dict[problem_number] = {
                 "name": problem_name,
