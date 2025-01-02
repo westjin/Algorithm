@@ -1,6 +1,5 @@
 import os
 import subprocess
-from datetime import datetime
 
 # 저장소 경로와 README 파일 경로 설정
 repo_path = "./"  # 저장소 루트 경로
@@ -10,7 +9,7 @@ readme_path = os.path.join(repo_path, "README.md")
 readme_template = """
 # 알고리즘 저장소 📚
 
-이 저장소는 백준 온라인 저지와 프로그래머스에서 해결한 알고리즘 문제 풀이를 모아둔 공간입니다. 🚀
+백준 온라인 저지와 프로그래머스에서 해결한 알고리즘 문제 풀이를 모아둔 공간입니다. 🚀
 
 ---
 
@@ -18,24 +17,9 @@ readme_template = """
 """
 
 # Git 커밋 날짜 가져오기
-# Git 커밋 날짜 가져오기
 def get_git_commit_date(file_path):
     try:
-        # 절대 경로로 변환
         file_path = os.path.abspath(file_path)
-        
-        # 파일이 Git에 트랙킹되었는지 확인
-        result = subprocess.run(
-            ["git", "ls-files", "--error-unmatch", file_path],
-            cwd=repo_path,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        if result.returncode != 0:  # Git에 포함되지 않은 파일
-            return "Unknown"
-
-        # Git 커밋 날짜 가져오기
         result = subprocess.run(
             ["git", "log", "-1", "--format=%ci", file_path],
             cwd=repo_path,
@@ -43,29 +27,23 @@ def get_git_commit_date(file_path):
             text=True,
             check=True
         )
-        commit_date = result.stdout.strip().split(" ")[0]  # 날짜만 추출
+        commit_date = result.stdout.strip().split(" ")[0]  # 날짜 부분만 추출
         return commit_date
-    except Exception as e:
-        print(f"Git 커밋 날짜를 가져오는 중 오류 발생: {e}")
-        return "Unknown"
+    except subprocess.CalledProcessError:
+        return "Unknown"  # Git에 포함되지 않은 파일 처리
 
 # 수동으로 태그 관리
-def get_manual_tags(problem_name, platform):
+def get_manual_tags(problem_number, platform):
     manual_tags = {
-        # 백준 문제 태그 (수동 입력)
         "백준": {
             "11286": "우선순위 큐, 정렬",
             "12891": "문자열, 슬라이딩 윈도우",
-            "1874": "스택",
-            "1940": "투 포인터",
         },
-        # 프로그래머스 문제 태그 (수동 입력)
         "프로그래머스": {
             "12906": "스택, 큐",
             "42586": "스택, 큐, 구현",
         },
     }
-    problem_number = problem_name.split(".")[0]  # 파일명에서 문제 번호만 추출
     return manual_tags.get(platform, {}).get(problem_number, "미분류")
 
 # 백준 난이도 추출
@@ -89,42 +67,40 @@ def get_programmers_level(root):
 # 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
     problem_dict = {}
-
-    for root, dirs, files in os.walk(base_path):
+    for root, _, files in os.walk(base_path):
         for file in files:
-            if file.endswith(".md") or file.endswith(".py") or file.endswith(".java"):  # 문제 파일 필터링
-                if file == "README.md":  # README 제외
-                    continue
-
+            if file.endswith(".py") or file.endswith(".java"):  # 파일 필터링
                 problem_name = os.path.splitext(file)[0]
+                problem_number = problem_name.split(".")[0]  # 문제 번호만 추출
                 file_path = os.path.join(root, file)
 
                 if platform == "백준":
                     difficulty = get_baekjoon_difficulty(root)
-                    tags = get_manual_tags(problem_name, platform)
+                    tags = get_manual_tags(problem_number, platform)
+                    link = f"https://www.acmicpc.net/problem/{problem_number}"
                 elif platform == "프로그래머스":
                     difficulty = get_programmers_level(root)
-                    tags = get_manual_tags(problem_name, platform)
+                    tags = get_manual_tags(problem_number, platform)
+                    link = f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_number}"
                 else:
                     difficulty = "Unknown"
                     tags = "미분류"
+                    link = "#"
 
-                if problem_name not in problem_dict:
-                    problem_dict[problem_name] = {
-                        "name": problem_name,
-                        "link": f"https://www.acmicpc.net/problem/{problem_name.split('.')[0]}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name.split('.')[0]}",
-                        "date": get_git_commit_date(file_path),
-                        "difficulty": difficulty,
-                        "tags": tags,
-                        "solved": "✅",
-                    }
+                problem_dict[problem_name] = {
+                    "name": problem_name,
+                    "link": link,
+                    "date": get_git_commit_date(file_path),
+                    "difficulty": difficulty,
+                    "tags": tags,
+                    "solved": "✅",
+                }
 
     return problem_dict
 
 # 난이도별 문제 텍스트 생성
 def generate_markdown_by_difficulty(problem_dict, platform):
     problem_text = f"### 📌 {platform}\n\n"
-
     difficulty_levels = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3", "Unknown"]
     for level in difficulty_levels:
         problems = [p for p in problem_dict.values() if p["difficulty"] == level]
@@ -135,17 +111,17 @@ def generate_markdown_by_difficulty(problem_dict, platform):
             for problem in problems:
                 problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
             problem_text += "\n"
-
     return problem_text
 
 # README 업데이트
 def update_readme():
     baekjoon_path = os.path.join(repo_path, "백준")
-    baekjoon_problems = classify_and_filter_problems(baekjoon_path, "백준")
-    baekjoon_text = generate_markdown_by_difficulty(baekjoon_problems, "백준")
-    
     programmers_path = os.path.join(repo_path, "프로그래머스")
+    
+    baekjoon_problems = classify_and_filter_problems(baekjoon_path, "백준")
     programmers_problems = classify_and_filter_problems(programmers_path, "프로그래머스")
+    
+    baekjoon_text = generate_markdown_by_difficulty(baekjoon_problems, "백준")
     programmers_text = generate_markdown_by_difficulty(programmers_problems, "프로그래머스")
     
     with open(readme_path, "w") as readme_file:
