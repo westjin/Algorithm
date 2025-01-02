@@ -1,5 +1,4 @@
 import os
-import requests
 from datetime import datetime
 
 # 저장소 경로와 README 파일 경로 설정
@@ -17,24 +16,19 @@ readme_template = """
 ## 📝 해결한 문제들
 """
 
-# solved.ac API를 통해 난이도 가져오기
-def get_solved_ac_level(problem_number):
-    url = f"https://solved.ac/api/v3/problem/show?problemId={problem_number}"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()  # HTTP 에러 확인
-        data = response.json()
-        level = data.get("level", 0)  # 난이도 레벨 (숫자)
-        level_name = data.get("displayName", "Unknown")  # 난이도 이름 (예: Silver III)
-        return level_name
-    except Exception as e:
-        print(f"solved.ac API 에러: {e}")
-        return "Unknown"
-
 # 파일 생성 날짜 가져오기
 def get_file_creation_date(file_path):
     timestamp = os.path.getmtime(file_path)  # 파일 수정 시간 기준
     return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
+
+# 난이도 추출
+def get_difficulty_from_path(root):
+    # 난이도 추출 (예: "Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3")
+    difficulties = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3"]
+    for difficulty in difficulties:
+        if difficulty in root:
+            return difficulty
+    return "Unknown"
 
 # 문제 목록 생성
 def classify_and_filter_problems(base_path, platform):
@@ -50,8 +44,8 @@ def classify_and_filter_problems(base_path, platform):
                 problem_name = os.path.splitext(file)[0]
                 file_path = os.path.join(root, file)
 
-                # 문제 번호 및 난이도 정보 가져오기
-                difficulty = get_solved_ac_level(problem_name) if platform == "백준" else "Level Unknown"
+                # 난이도 추출
+                difficulty = get_difficulty_from_path(root)
 
                 # 중복 제거
                 if problem_name not in problem_dict:
@@ -68,13 +62,19 @@ def classify_and_filter_problems(base_path, platform):
 # 난이도별 문제 텍스트 생성
 def generate_markdown_by_difficulty(problem_dict, platform):
     problem_text = f"### 📌 {platform}\n\n"
-    problem_text += "| **문제** | **난이도** | **풀이 날짜** | **해결 여부** |\n"
-    problem_text += "|----------|------------|---------------|---------------|\n"
 
-    for problem in problem_dict.values():
-        problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['difficulty']} | {problem['date']} | {problem['solved']} |\n"
+    # 난이도별 분류
+    difficulty_levels = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3", "Unknown"]
+    for level in difficulty_levels:
+        problems = [p for p in problem_dict.values() if p["difficulty"] == level]
+        if problems:
+            problem_text += f"#### {level}\n"
+            problem_text += "| **문제** | **풀이 날짜** | **해결 여부** |\n"
+            problem_text += "|----------|---------------|---------------|\n"
+            for problem in problems:
+                problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['date']} | {problem['solved']} |\n"
+            problem_text += "\n"
 
-    problem_text += "\n"
     return problem_text
 
 # README 업데이트
