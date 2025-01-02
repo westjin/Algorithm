@@ -47,23 +47,22 @@ def get_manual_tags(problem_number, platform):
     }
     return manual_tags.get(platform, {}).get(problem_number, "미분류")
 
-# 문제 번호 및 난이도 추출
-def extract_problem_data(folder_path, folder_name, platform):
+# 문제 데이터 추출
+def extract_problem_data(root, folder_name, platform):
     try:
         if platform == "백준":
-            difficulty = os.path.basename(os.path.dirname(folder_path))  # 난이도 (Bronze, Silver 등)
-            problem_number = folder_name.split(".")[0]  # 문제 번호
-            problem_name = folder_name.split(".")[1].strip() if "." in folder_name else "Unknown"
-            return problem_number, problem_name, difficulty
+            difficulty = os.path.basename(os.path.dirname(root))  # 난이도 (Bronze, Silver 등)
+            problem_number, problem_name = folder_name.split(".")
+            return problem_number.strip(), problem_name.strip(), difficulty
         elif platform == "프로그래머스":
-            level = os.path.basename(os.path.dirname(folder_path))  # Level 1, Level 2
-            problem_number = folder_name.split(".")[0]  # 문제 번호
-            problem_name = folder_name.split(".")[1].strip() if "." in folder_name else "Unknown"
-            return problem_number, problem_name, f"Level {level}"
+            level = os.path.basename(os.path.dirname(root))  # Level 1, Level 2
+            problem_number, problem_name = folder_name.split(".")
+            return problem_number.strip(), problem_name.strip(), f"Level {level}"
     except Exception as e:
         print(f"문제 데이터 추출 오류: {e}")
-        return None, "Unknown", "Unknown"
+        return None, None, "Unknown"
 
+# 문제 분류 및 필터링
 def classify_and_filter_problems(base_path, platform):
     problem_dict = {}
     if not os.path.exists(base_path):
@@ -73,14 +72,18 @@ def classify_and_filter_problems(base_path, platform):
     for root, dirs, files in os.walk(base_path):
         for folder in dirs:
             folder_path = os.path.join(root, folder)
-            problem_number, problem_name, difficulty = extract_problem_data(folder_path, folder, platform)
+            problem_number, problem_name, difficulty = extract_problem_data(root, folder, platform)
 
-            # 폴더가 비어 있는 경우 스킵
+            if not problem_number or difficulty not in ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3"]:
+                continue
+
             files_in_folder = os.listdir(folder_path)
             if not files_in_folder:
-                print(f"폴더가 비어 있습니다: {folder_path}")
                 continue
-            file_path = os.path.join(folder_path, files_in_folder[0])  # 첫 번째 파일 경로
+            file_path = os.path.join(folder_path, files_in_folder[0])
+
+            if problem_number in problem_dict:
+                continue
 
             problem_dict[problem_number] = {
                 "name": problem_name,
@@ -93,10 +96,10 @@ def classify_and_filter_problems(base_path, platform):
 
     return problem_dict
 
-# 난이도별 문제 텍스트 생성
+# 난이도별 마크다운 생성
 def generate_markdown_by_difficulty(problem_dict, platform):
     problem_text = f"### 📌 {platform}\n\n"
-    difficulty_levels = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3", "Unknown"]
+    difficulty_levels = ["Bronze", "Silver", "Gold", "Platinum", "Level 1", "Level 2", "Level 3"]
 
     for level in difficulty_levels:
         problems = [p for p in problem_dict.values() if p["difficulty"] == level]
@@ -105,7 +108,8 @@ def generate_markdown_by_difficulty(problem_dict, platform):
             problem_text += "| **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |\n"
             problem_text += "|---------------|--------------|----------|---------------|---------------|\n"
             for problem_number, problem in sorted(problem_dict.items()):
-                problem_text += f"| {problem_number} | [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
+                if problem["difficulty"] == level:
+                    problem_text += f"| {problem_number} | [{problem['name']}]({problem['link']}) | {problem['tags']} | {problem['date']} | {problem['solved']} |\n"
             problem_text += "\n"
 
     return problem_text
