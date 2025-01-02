@@ -36,16 +36,20 @@ def get_git_commit_date(file_path):
 # 수동으로 태그 관리
 def get_manual_tags(problem_name, platform):
     manual_tags = {
+        # 백준 문제 태그 (수동 입력)
         "백준": {
             "11286": "우선순위 큐, 정렬",
             "12891": "문자열, 슬라이딩 윈도우",
+            "1874": "스택",
+            "1940": "투 포인터",
         },
+        # 프로그래머스 문제 태그 (수동 입력)
         "프로그래머스": {
             "12906": "스택, 큐",
             "42586": "스택, 큐, 구현",
         },
     }
-    problem_number = problem_name.split(".")[0]  # 문제 번호만 추출
+    problem_number = problem_name.split(".")[0]  # 파일명에서 문제 번호만 추출
     return manual_tags.get(platform, {}).get(problem_number, "미분류")
 
 # 백준 난이도 추출
@@ -58,11 +62,11 @@ def get_baekjoon_difficulty(root):
 
 # 프로그래머스 레벨 추출
 def get_programmers_level(root):
-    if root.startswith("1/"):
+    if "1/" in root:
         return "Level 1"
-    elif root.startswith("2/"):
+    elif "2/" in root:
         return "Level 2"
-    elif root.startswith("3/"):
+    elif "3/" in root:
         return "Level 3"
     return "Unknown"
 
@@ -76,15 +80,15 @@ def classify_and_filter_problems(base_path, platform):
                 if file == "README.md":  # README 제외
                     continue
 
-                problem_name = os.path.splitext(file)[0]  # 파일명에서 확장자 제거
+                problem_name = os.path.splitext(file)[0]
                 file_path = os.path.join(root, file)
 
                 if platform == "백준":
                     difficulty = get_baekjoon_difficulty(root)
-                    tags = get_manual_tags(problem_name, platform)  # 수동 태그 관리
+                    tags = get_manual_tags(problem_name, platform)
                 elif platform == "프로그래머스":
                     difficulty = get_programmers_level(root)
-                    tags = get_manual_tags(problem_name, platform)  # 수동 태그 관리
+                    tags = get_manual_tags(problem_name, platform)
                 else:
                     difficulty = "Unknown"
                     tags = "미분류"
