@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 # 저장소 경로와 README 파일 경로 설정
 repo_path = "./"  # 저장소 루트 경로
@@ -14,58 +15,67 @@ readme_template = """
 
 ## 📝 해결한 문제들
 
-| **카테고리** | **문제** | **난이도** | **풀이 날짜** | **해결 여부** |
-|--------------|----------|------------|---------------|---------------|
 """
 
+# 파일 생성 날짜 가져오기
+def get_file_creation_date(file_path):
+    timestamp = os.path.getmtime(file_path)  # 파일 수정 시간 기준
+    return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
+
 # 문제 목록 생성
-def generate_problem_list(base_path, platform):
-    problem_list = []
-    
+def classify_and_filter_problems(base_path, platform):
+    problem_dict = {}  # 문제 중복 제거를 위한 딕셔너리
+
     for root, dirs, files in os.walk(base_path):
         for file in files:
             if file.endswith(".md") or file.endswith(".py") or file.endswith(".java"):  # 문제 파일 필터링
-                # 파일 경로 및 카테고리 추출
-                category = os.path.basename(root)
-                rel_path = os.path.relpath(os.path.join(root, file), repo_path)
-                
-                # 난이도 및 링크 설정
+                # 문제 이름 및 파일 경로
                 problem_name = os.path.splitext(file)[0]
-                link = f"https://www.acmicpc.net/problem/{problem_name}"  # 기본적으로 백준 문제 링크
-                level_icon = "https://static.solved.ac/tier_small/1.svg"  # 예시로 난이도 아이콘 설정
-                
-                # 문제 추가
-                problem_list.append({
-                    "category": category,
-                    "name": problem_name,
-                    "link": link,
-                    "level_icon": level_icon,
-                    "date": "YYYY-MM-DD",  # 여기에 풀이 날짜를 수동으로 넣거나, 파일 생성 날짜를 이용해 자동화 가능
-                    "solved": "O"  # 해결 여부, O 또는 X
-                })
-    
-    # 문제 텍스트 생성
-    problem_text = ""
-    for problem in problem_list:
-        problem_text += f"| {problem['category']} | [{problem['name']}]({problem['link']}) | <img height='25px' width='25px' src='{problem['level_icon']}'/> | {problem['date']} | {problem['solved']} |\n"
-    
+                file_path = os.path.join(root, file)
+
+                # 문제 번호(백준) 또는 ID(프로그래머스)를 키로 사용
+                problem_key = problem_name
+
+                # 중복 확인
+                if problem_key not in problem_dict:
+                    problem_dict[problem_key] = {
+                        "name": problem_name,
+                        "link": f"https://www.acmicpc.net/problem/{problem_name}" if platform == "백준" else f"https://school.programmers.co.kr/learn/courses/30/lessons/{problem_name}",
+                        "date": get_file_creation_date(file_path),
+                        "solved": "O",
+                    }
+
+    return problem_dict
+
+# 난이도별 문제 텍스트 생성
+def generate_markdown_by_difficulty(problem_dict, platform):
+    problem_text = f"### 📌 {platform}\n\n"
+    problem_text += "| **문제** | **풀이 날짜** | **해결 여부** |\n"
+    problem_text += "|----------|---------------|---------------|\n"
+
+    for problem in problem_dict.values():
+        problem_text += f"| [{problem['name']}]({problem['link']}) | {problem['date']} | {problem['solved']} |\n"
+
+    problem_text += "\n"
     return problem_text
 
 # README 업데이트
 def update_readme():
-    # 백준 문제 목록
+    # 백준 문제 목록 생성
     baekjoon_path = os.path.join(repo_path, "백준")
-    baekjoon_problems = generate_problem_list(baekjoon_path, "백준")
+    baekjoon_problems = classify_and_filter_problems(baekjoon_path, "백준")
+    baekjoon_text = generate_markdown_by_difficulty(baekjoon_problems, "백준")
     
-    # 프로그래머스 문제 목록
+    # 프로그래머스 문제 목록 생성
     programmers_path = os.path.join(repo_path, "프로그래머스")
-    programmers_problems = generate_problem_list(programmers_path, "프로그래머스")
+    programmers_problems = classify_and_filter_problems(programmers_path, "프로그래머스")
+    programmers_text = generate_markdown_by_difficulty(programmers_problems, "프로그래머스")
     
     # README 생성
     with open(readme_path, "w") as readme_file:
         readme_file.write(readme_template)
-        readme_file.write(baekjoon_problems)
-        readme_file.write(programmers_problems)
+        readme_file.write(baekjoon_text)
+        readme_file.write(programmers_text)
 
 if __name__ == "__main__":
     update_readme()
