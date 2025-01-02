@@ -1,0 +1,32 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 push될 때 실행
+  schedule:
+    - cron: '0 0 * * *'  # 매일 자정에 실행
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Run update script
+        run: python update_readme.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add README.md
+          git commit -m "Update README with solved problems"
+          git push
