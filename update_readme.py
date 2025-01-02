@@ -27,12 +27,11 @@ def get_git_commit_date(file_path):
             text=True,
             check=True
         )
-        commit_date = result.stdout.strip().split(" ")[0]  # 날짜 부분만 추출
-        return commit_date
+        return result.stdout.strip().split(" ")[0]
     except subprocess.CalledProcessError:
-        return "Unknown"  # Git에 포함되지 않은 파일 처리
+        return "Unknown"
 
-# 수동으로 태그 관리
+# 수동 태그 관리
 def get_manual_tags(problem_number, platform):
     manual_tags = {
         "백준": {
@@ -87,7 +86,7 @@ def classify_and_filter_problems(base_path, platform):
                     tags = "미분류"
                     link = "#"
 
-                problem_dict[problem_name] = {
+                problem_dict[problem_number] = {
                     "name": problem_name,
                     "link": link,
                     "date": get_git_commit_date(file_path),
