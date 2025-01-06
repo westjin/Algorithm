@@ -28,6 +28,7 @@
 | 1940 | [주몽](https://www.acmicpc.net/problem/1940) | 미분류 | 2024-12-29 | ✅ |
 | 2018 | [수들의 합 5](https://www.acmicpc.net/problem/2018) | 미분류 | 2024-12-29 | ✅ |
 | 2164 | [카드2](https://www.acmicpc.net/problem/2164) | 미분류 | 2025-01-01 | ✅ |
+| 2751 | [수 정렬하기 2](https://www.acmicpc.net/problem/2751) | 미분류 | 2025-01-06 | ✅ |
 
 #### Gold
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
