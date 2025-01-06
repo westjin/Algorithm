@@ -23,6 +23,7 @@
 | 11286 | [절댓값 힙](https://www.acmicpc.net/problem/11286) | 미분류 | 2025-01-01 | ✅ |
 | 11399 | [ATM](https://www.acmicpc.net/problem/11399) | 미분류 | 2025-01-04 | ✅ |
 | 11659 | [구간 합 구하기 4](https://www.acmicpc.net/problem/11659) | 미분류 | 2024-12-12 | ✅ |
+| 11724 | [연결 요소의 개수](https://www.acmicpc.net/problem/11724) | 미분류 | 2025-01-06 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
 | 1427 | [소트인사이드](https://www.acmicpc.net/problem/1427) | 미분류 | 2025-01-02 | ✅ |
 | 1874 | [스택 수열](https://www.acmicpc.net/problem/1874) | 미분류 | 2025-01-01 | ✅ |
