@@ -54,6 +54,7 @@
 #### Level 2
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
+| 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-01-10 | ✅ |
 | 42586 | [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586) | 스택, 큐, 구현 | 2025-01-02 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-01-09 | ✅ |
 
