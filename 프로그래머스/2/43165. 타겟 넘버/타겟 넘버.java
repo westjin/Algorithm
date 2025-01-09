@@ -1,22 +1,29 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution {
     static int count;
     public int solution(int[] numbers, int target) {
-        int answer = 0;
-        DFS(numbers,target, numbers[0], 0);
-        DFS(numbers,target, numbers[0]*-1, 0);
-        
+        BFS(numbers,target);
         return count;
     }
-     private static void DFS ( int[] numbers, int target, int now, int index){
+     private static void BFS (int[] numbers,int target){
+            int[] now = new int[] {0,0};
 
-            if (index == numbers.length - 1) {
-                if (now == target) {
-                    count++;
+            Queue<int[]> q = new LinkedList<>();
+
+            q.offer(new int[]{now[0] + numbers[now[1]],now[1]});
+            q.offer(new int[]{now[0] - numbers[now[1]],now[1]});
+            while (!q.isEmpty()){
+                now = q.poll();
+                if (now[0] == target && now[1] == numbers.length -1){
+                    count ++;
                 }
-                return;
+                if (now[1] < numbers.length -1){
+                    q.offer(new int[]{now[0] + numbers[now[1]+1],now[1]+1});
+                    q.offer(new int[]{now[0] - numbers[now[1]+1],now[1]+1});
+                }
             }
 
-            DFS(numbers, target, now + numbers[index+1], index + 1); // +
-            DFS(numbers, target, now - numbers[index+1], index + 1); // -
         }
 }
