@@ -1,4 +1,5 @@
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,14 +26,16 @@ public class Main {
 
         //소수 찾기 로직
         for (int i = 0; i < numbers.length; i++) { //배열 접근
-            for (int j = 2; j <= numbers[i]; j++) { //소수 검증
-              if (j == numbers[i]){
-                  count++;
+            boolean isPrime = true;
+            if (numbers[i] < 2) isPrime = false;
+            for (int j = 2; j <= Math.sqrt(numbers[i]); j++) { //소수 검증
+              if(numbers[i] % j == 0){ // 소수 아님
+                  isPrime = false;
                   break;
               }
-              if(numbers[i] % j == 0){
-                  break;
-              }
+            }
+            if (isPrime){
+                count++;
             }
         }
 
