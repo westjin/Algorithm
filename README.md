@@ -29,6 +29,7 @@
 | 11724 | [연결 요소의 개수](https://www.acmicpc.net/problem/11724) | 미분류 | 2025-01-06 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
 | 1427 | [소트인사이드](https://www.acmicpc.net/problem/1427) | 미분류 | 2025-01-02 | ✅ |
+| 15649 | [N과 M （1）](https://www.acmicpc.net/problem/15649) | 미분류 | 2025-03-22 | ✅ |
 | 1874 | [스택 수열](https://www.acmicpc.net/problem/1874) | 미분류 | 2025-01-01 | ✅ |
 | 1940 | [주몽](https://www.acmicpc.net/problem/1940) | 미분류 | 2024-12-29 | ✅ |
 | 2018 | [수들의 합 5](https://www.acmicpc.net/problem/2018) | 미분류 | 2024-12-29 | ✅ |
