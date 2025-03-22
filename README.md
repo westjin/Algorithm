@@ -15,6 +15,7 @@
 | 11720 | [숫자의 합](https://www.acmicpc.net/problem/11720) | 수학, 구현 | 2024-12-11 | ✅ |
 | 1546 | [평균](https://www.acmicpc.net/problem/1546) | 수학, 구현 | 2024-12-11 | ✅ |
 | 1978 | [소수 찾기](https://www.acmicpc.net/problem/1978) | 미분류 | 2025-03-21 | ✅ |
+| 2609 | [최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609) | 미분류 | 2025-03-22 | ✅ |
 | 2750 | [수 정렬하기](https://www.acmicpc.net/problem/2750) | 정렬 | 2025-01-02 | ✅ |
 
 #### Silver
