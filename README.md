@@ -26,6 +26,7 @@
 | 10845 | [큐](https://www.acmicpc.net/problem/10845) | 미분류 | 2025-03-28 | ✅ |
 | 10974 | [모든 순열](https://www.acmicpc.net/problem/10974) | 미분류 | 2025-03-22 | ✅ |
 | 11004 | [K번째 수](https://www.acmicpc.net/problem/11004) | 미분류 | 2025-01-04 | ✅ |
+| 11279 | [최대 힙](https://www.acmicpc.net/problem/11279) | 미분류 | 2025-03-28 | ✅ |
 | 11286 | [절댓값 힙](https://www.acmicpc.net/problem/11286) | 미분류 | 2025-01-01 | ✅ |
 | 11399 | [ATM](https://www.acmicpc.net/problem/11399) | 미분류 | 2025-01-04 | ✅ |
 | 11659 | [구간 합 구하기 4](https://www.acmicpc.net/problem/11659) | 미분류 | 2024-12-12 | ✅ |
