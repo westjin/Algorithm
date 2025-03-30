@@ -24,6 +24,7 @@
 |---------------|--------------|----------|---------------|---------------|
 | 10828 | [스택](https://www.acmicpc.net/problem/10828) | 미분류 | 2025-03-28 | ✅ |
 | 10845 | [큐](https://www.acmicpc.net/problem/10845) | 미분류 | 2025-03-28 | ✅ |
+| 10866 | [덱](https://www.acmicpc.net/problem/10866) | 미분류 | 2025-03-30 | ✅ |
 | 10974 | [모든 순열](https://www.acmicpc.net/problem/10974) | 미분류 | 2025-03-22 | ✅ |
 | 11004 | [K번째 수](https://www.acmicpc.net/problem/11004) | 미분류 | 2025-01-04 | ✅ |
 | 11279 | [최대 힙](https://www.acmicpc.net/problem/11279) | 미분류 | 2025-03-28 | ✅ |
