@@ -32,6 +32,7 @@
 | 11399 | [ATM](https://www.acmicpc.net/problem/11399) | 미분류 | 2025-01-04 | ✅ |
 | 11659 | [구간 합 구하기 4](https://www.acmicpc.net/problem/11659) | 미분류 | 2024-12-12 | ✅ |
 | 11724 | [연결 요소의 개수](https://www.acmicpc.net/problem/11724) | 미분류 | 2025-01-06 | ✅ |
+| 11726 | [2×n 타일링](https://www.acmicpc.net/problem/11726) | 미분류 | 2025-04-22 | ✅ |
 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 미분류 | 2025-04-09 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
 | 1427 | [소트인사이드](https://www.acmicpc.net/problem/1427) | 미분류 | 2025-01-02 | ✅ |
