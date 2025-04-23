@@ -47,6 +47,7 @@
 | 2164 | [카드2](https://www.acmicpc.net/problem/2164) | 미분류 | 2025-01-01 | ✅ |
 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 미분류 | 2025-01-09 | ✅ |
 | 2512 | [예산](https://www.acmicpc.net/problem/2512) | 미분류 | 2025-04-05 | ✅ |
+| 2579 | [계단 오르기](https://www.acmicpc.net/problem/2579) | 미분류 | 2025-04-23 | ✅ |
 | 2606 | [바이러스](https://www.acmicpc.net/problem/2606) | 미분류 | 2025-04-05 | ✅ |
 | 2667 | [단지번호붙이기](https://www.acmicpc.net/problem/2667) | 미분류 | 2025-04-09 | ✅ |
 | 2751 | [수 정렬하기 2](https://www.acmicpc.net/problem/2751) | 미분류 | 2025-01-06 | ✅ |
