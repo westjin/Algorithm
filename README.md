@@ -72,6 +72,7 @@
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
 | 12906 | [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906) | 스택, 큐 | 2025-01-01 | ✅ |
+| 12982 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982) | 미분류 | 2025-04-25 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
 
 #### Level 2
