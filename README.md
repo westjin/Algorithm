@@ -37,6 +37,7 @@
 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 미분류 | 2025-04-09 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
 | 1427 | [소트인사이드](https://www.acmicpc.net/problem/1427) | 미분류 | 2025-01-02 | ✅ |
+| 14501 | [퇴사](https://www.acmicpc.net/problem/14501) | 미분류 | 2025-04-24 | ✅ |
 | 1463 | [1로 만들기](https://www.acmicpc.net/problem/1463) | 미분류 | 2025-04-21 | ✅ |
 | 15649 | [N과 M （1）](https://www.acmicpc.net/problem/15649) | 미분류 | 2025-03-22 | ✅ |
 | 1874 | [스택 수열](https://www.acmicpc.net/problem/1874) | 미분류 | 2025-01-01 | ✅ |
