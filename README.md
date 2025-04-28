@@ -86,3 +86,8 @@
 | 42587 | [프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | 미분류 | 2025-01-20 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-01-09 | ✅ |
 
+#### Level 3
+| **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
+|---------------|--------------|----------|---------------|---------------|
+| 49189 | [가장 먼 노드](https://school.programmers.co.kr/learn/courses/30/lessons/49189) | 미분류 | 2025-04-28 | ✅ |
+
