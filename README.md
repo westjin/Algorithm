@@ -40,6 +40,7 @@
 | 14501 | [퇴사](https://www.acmicpc.net/problem/14501) | 미분류 | 2025-04-24 | ✅ |
 | 1463 | [1로 만들기](https://www.acmicpc.net/problem/1463) | 미분류 | 2025-04-21 | ✅ |
 | 15649 | [N과 M （1）](https://www.acmicpc.net/problem/15649) | 미분류 | 2025-03-22 | ✅ |
+| 1629 | [곱셈](https://www.acmicpc.net/problem/1629) | 미분류 | 2025-05-05 | ✅ |
 | 1780 | [종이의 개수](https://www.acmicpc.net/problem/1780) | 미분류 | 2025-05-01 | ✅ |
 | 1874 | [스택 수열](https://www.acmicpc.net/problem/1874) | 미분류 | 2025-01-01 | ✅ |
 | 1920 | [수 찾기](https://www.acmicpc.net/problem/1920) | 미분류 | 2025-04-05 | ✅ |
