@@ -47,6 +47,7 @@
 | 1927 | [최소 힙](https://www.acmicpc.net/problem/1927) | 미분류 | 2025-03-28 | ✅ |
 | 1929 | [소수 구하기](https://www.acmicpc.net/problem/1929) | 미분류 | 2025-03-22 | ✅ |
 | 1940 | [주몽](https://www.acmicpc.net/problem/1940) | 미분류 | 2024-12-29 | ✅ |
+| 1992 | [쿼드트리](https://www.acmicpc.net/problem/1992) | 미분류 | 2025-05-06 | ✅ |
 | 2018 | [수들의 합 5](https://www.acmicpc.net/problem/2018) | 미분류 | 2024-12-29 | ✅ |
 | 2164 | [카드2](https://www.acmicpc.net/problem/2164) | 미분류 | 2025-01-01 | ✅ |
 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 미분류 | 2025-01-09 | ✅ |
