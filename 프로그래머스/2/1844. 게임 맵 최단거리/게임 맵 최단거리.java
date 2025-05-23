@@ -1,46 +1,45 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
+import java.util.*;
 class Solution {
-    static int[] dx = {0,1,0,-1};
-    static int[] dy = {1,0,-1,0};
-    static boolean[][] visited;
     public int solution(int[][] maps) {
-
         int answer = 0;
-        visited = new boolean[maps.length][maps[0].length];
-        bfs(0,0,maps);
+        // BFS로 최단거리 구하기
+        
+        // 시작 점 예약 (0,0, 거리 1)
+        int[] dr = {1,-1,0,0};
+        int[] dc = {0,0,1,-1};
+        int n = maps.length;
+        int m = maps[0].length;
+        Queue<int[]> queue = new ArrayDeque<>();
+        boolean[][] visited = new boolean[n][m];
         
         
-        answer = maps[maps.length-1][maps[0].length-1];
-        if (answer == 1){
-            return -1;
-        }
+        queue.offer(new int[]{0,0,1});
+        visited[0][0] = true;
         
-        
-        return answer;
-    }
-    
-    public static void bfs(int i, int j,int[][] maps){
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[] {i,j});
-        visited[i][j] = true;
-        
-        while(!q.isEmpty()){
-            int[] now = q.poll();
+        while(!queue.isEmpty()){
+        //현재 노드 방문
+            int[] cur = queue.poll();
+            int r = cur[0], c = cur[1], dist = cur[2];
             
-            for(int k = 0; k < 4; k++){
-                int x = now[0] + dx[k];
-                int y = now[1] + dy[k];
-                if(x < maps.length && y < maps[0].length && 
-                   x >= 0 && y >=0){
-                    if(maps[x][y] != 0 && !visited[x][y]){
-                        visited[x][y] = true;
-                        maps[x][y] = maps[now[0]][now[1]] + 1;
-                        q.add(new int[]{x,y});
+        
+        //if 도착지 도달하면 Return dist;
+        if(r == n-1 && c == m -1) return dist;
+        //다음 노드 예약
+            for(int i = 0; i < 4; i++){
+                int nr = r +dr[i], nc = c + dc[i];
+                if(nr >= 0&& nr < n && nc >= 0 && nc < m && maps[nr][nc] == 1){
+                    if(!visited[nr][nc]){
+                        queue.offer(new int[]{nr,nc,dist + 1});
+                        visited[nr][nc] =true;
                     }
                 }
-            }   
+            
+            }
+        
         }
+        
+        
+        
+        return -1;
     }
 }
