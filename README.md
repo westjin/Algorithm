@@ -99,6 +99,7 @@
 | 42586 | [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586) | 스택, 큐, 구현 | 2025-01-02 | ✅ |
 | 42587 | [프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | 미분류 | 2025-01-20 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-01-09 | ✅ |
+| 86971 | [전력망을 둘로 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/86971) | 미분류 | 2025-05-29 | ✅ |
 
 #### Level 3
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
