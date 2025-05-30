@@ -88,6 +88,7 @@
 | 12982 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982) | 미분류 | 2025-04-25 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
 | 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2025-05-21 | ✅ |
+| 92334 | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | 미분류 | 2025-05-30 | ✅ |
 
 #### Level 2
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
