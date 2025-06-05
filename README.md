@@ -74,6 +74,7 @@
 | 1477 | [휴게소 세우기](https://www.acmicpc.net/problem/1477) | 미분류 | 2025-05-20 | ✅ |
 | 15486 | [퇴사 2](https://www.acmicpc.net/problem/15486) | 미분류 | 2025-04-24 | ✅ |
 | 1644 | [소수의 연속합](https://www.acmicpc.net/problem/1644) | 미분류 | 2025-05-06 | ✅ |
+| 20056 | [마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056) | 미분류 | 2025-06-05 | ✅ |
 
 #### Platinum
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
