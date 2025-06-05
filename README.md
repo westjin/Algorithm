@@ -36,6 +36,7 @@
 | 11726 | [2×n 타일링](https://www.acmicpc.net/problem/11726) | 미분류 | 2025-04-22 | ✅ |
 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 미분류 | 2025-04-09 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
+| 13305 | [주유소](https://www.acmicpc.net/problem/13305) | 미분류 | 2025-06-05 | ✅ |
 | 1427 | [소트인사이드](https://www.acmicpc.net/problem/1427) | 미분류 | 2025-01-02 | ✅ |
 | 14501 | [퇴사](https://www.acmicpc.net/problem/14501) | 미분류 | 2025-04-24 | ✅ |
 | 1463 | [1로 만들기](https://www.acmicpc.net/problem/1463) | 미분류 | 2025-04-21 | ✅ |
