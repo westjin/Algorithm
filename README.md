@@ -34,6 +34,7 @@
 | 11722 | [가장 긴 감소하는 부분 수열](https://www.acmicpc.net/problem/11722) | 미분류 | 2025-04-23 | ✅ |
 | 11724 | [연결 요소의 개수](https://www.acmicpc.net/problem/11724) | 미분류 | 2025-01-06 | ✅ |
 | 11726 | [2×n 타일링](https://www.acmicpc.net/problem/11726) | 미분류 | 2025-04-22 | ✅ |
+| 1182 | [부분수열의 합](https://www.acmicpc.net/problem/1182) | 미분류 | 2025-06-09 | ✅ |
 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 미분류 | 2025-04-09 | ✅ |
 | 12891 | [DNA 비밀번호](https://www.acmicpc.net/problem/12891) | 미분류 | 2025-01-01 | ✅ |
 | 13305 | [주유소](https://www.acmicpc.net/problem/13305) | 미분류 | 2025-06-05 | ✅ |
