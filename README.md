@@ -104,6 +104,7 @@
 | 42584 | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584) | 미분류 | 2025-01-20 | ✅ |
 | 42586 | [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586) | 스택, 큐, 구현 | 2025-01-02 | ✅ |
 | 42587 | [프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | 미분류 | 2025-01-20 | ✅ |
+| 42839 | [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) | 미분류 | 2025-06-10 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-01-09 | ✅ |
 | 76502 | [괄호 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/76502) | 미분류 | 2025-05-30 | ✅ |
 | 86971 | [전력망을 둘로 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/86971) | 미분류 | 2025-05-30 | ✅ |
