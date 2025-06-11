@@ -102,6 +102,7 @@
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
 | 12909 | [올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909) | 미분류 | 2025-01-16 | ✅ |
+| 1835 | [단체사진 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/1835) | 미분류 | 2025-06-12 | ✅ |
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
 | 42583 | [다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583) | 미분류 | 2025-01-16 | ✅ |
 | 42584 | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584) | 미분류 | 2025-01-20 | ✅ |
