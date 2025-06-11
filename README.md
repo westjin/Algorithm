@@ -43,6 +43,7 @@
 | 14501 | [퇴사](https://www.acmicpc.net/problem/14501) | 미분류 | 2025-04-24 | ✅ |
 | 1463 | [1로 만들기](https://www.acmicpc.net/problem/1463) | 미분류 | 2025-04-21 | ✅ |
 | 15649 | [N과 M （1）](https://www.acmicpc.net/problem/15649) | 미분류 | 2025-03-22 | ✅ |
+| 15787 | [기차가 어둠을 헤치고 은하수를](https://www.acmicpc.net/problem/15787) | 미분류 | 2025-06-11 | ✅ |
 | 1629 | [곱셈](https://www.acmicpc.net/problem/1629) | 미분류 | 2025-05-05 | ✅ |
 | 1654 | [랜선 자르기](https://www.acmicpc.net/problem/1654) | 미분류 | 2025-05-18 | ✅ |
 | 16953 | [A → B](https://www.acmicpc.net/problem/16953) | 미분류 | 2025-06-02 | ✅ |
