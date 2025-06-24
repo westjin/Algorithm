@@ -80,6 +80,7 @@
 | 15486 | [퇴사 2](https://www.acmicpc.net/problem/15486) | 미분류 | 2025-04-24 | ✅ |
 | 1644 | [소수의 연속합](https://www.acmicpc.net/problem/1644) | 미분류 | 2025-05-06 | ✅ |
 | 1744 | [수 묶기](https://www.acmicpc.net/problem/1744) | 미분류 | 2025-06-05 | ✅ |
+| 1958 | [LCS 3](https://www.acmicpc.net/problem/1958) | 미분류 | 2025-06-24 | ✅ |
 | 20056 | [마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056) | 미분류 | 2025-06-05 | ✅ |
 
 #### Platinum
