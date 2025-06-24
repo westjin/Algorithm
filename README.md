@@ -64,6 +64,7 @@
 | 2667 | [단지번호붙이기](https://www.acmicpc.net/problem/2667) | 미분류 | 2025-04-09 | ✅ |
 | 2751 | [수 정렬하기 2](https://www.acmicpc.net/problem/2751) | 미분류 | 2025-01-06 | ✅ |
 | 2805 | [나무 자르기](https://www.acmicpc.net/problem/2805) | 미분류 | 2025-05-18 | ✅ |
+| 3005 | [크로스워드 퍼즐 쳐다보기](https://www.acmicpc.net/problem/3005) | 미분류 | 2025-06-24 | ✅ |
 | 8911 | [거북이](https://www.acmicpc.net/problem/8911) | 미분류 | 2025-05-08 | ✅ |
 | 9095 | [1， 2， 3 더하기](https://www.acmicpc.net/problem/9095) | 미분류 | 2025-04-22 | ✅ |
 
