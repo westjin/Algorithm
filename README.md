@@ -84,6 +84,7 @@
 | 1958 | [LCS 3](https://www.acmicpc.net/problem/1958) | 미분류 | 2025-06-24 | ✅ |
 | 20056 | [마법사 상어와 파이어볼](https://www.acmicpc.net/problem/20056) | 미분류 | 2025-06-05 | ✅ |
 | 2671 | [잠수함식별](https://www.acmicpc.net/problem/2671) | 미분류 | 2025-06-24 | ✅ |
+| 9663 | [N－Queen](https://www.acmicpc.net/problem/9663) | 미분류 | 2025-06-25 | ✅ |
 | 9935 | [문자열 폭발](https://www.acmicpc.net/problem/9935) | 미분류 | 2025-06-24 | ✅ |
 
 #### Platinum
