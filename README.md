@@ -76,6 +76,7 @@
 | 11729 | [하노이 탑 이동 순서](https://www.acmicpc.net/problem/11729) | 미분류 | 2025-05-07 | ✅ |
 | 1253 | [좋다](https://www.acmicpc.net/problem/1253) | 이분 탐색 | 2024-12-29 | ✅ |
 | 14500 | [테트로미노](https://www.acmicpc.net/problem/14500) | 미분류 | 2025-05-22 | ✅ |
+| 14502 | [연구소](https://www.acmicpc.net/problem/14502) | 미분류 | 2025-12-09 | ✅ |
 | 1477 | [휴게소 세우기](https://www.acmicpc.net/problem/1477) | 미분류 | 2025-05-20 | ✅ |
 | 14891 | [톱니바퀴](https://www.acmicpc.net/problem/14891) | 미분류 | 2025-06-11 | ✅ |
 | 15486 | [퇴사 2](https://www.acmicpc.net/problem/15486) | 미분류 | 2025-04-24 | ✅ |
