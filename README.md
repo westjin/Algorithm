@@ -119,6 +119,7 @@
 | 42839 | [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) | 미분류 | 2025-11-19 | ✅ |
 | 42890 | [후보키](https://school.programmers.co.kr/learn/courses/30/lessons/42890) | 미분류 | 2025-12-17 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-11-19 | ✅ |
+| 59040 | [고양이와 개는 몇 마리 있을까](https://school.programmers.co.kr/learn/courses/30/lessons/59040) | 미분류 | 2026-04-12 | ✅ |
 | 76502 | [괄호 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/76502) | 미분류 | 2025-05-30 | ✅ |
 | 86971 | [전력망을 둘로 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/86971) | 미분류 | 2025-05-30 | ✅ |
 
