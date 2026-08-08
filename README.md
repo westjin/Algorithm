@@ -103,6 +103,7 @@
 | 12906 | [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906) | 스택, 큐 | 2025-01-01 | ✅ |
 | 12982 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982) | 미분류 | 2025-04-25 | ✅ |
 | 132201 | [12세 이하인 여자 환자 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/132201) | 미분류 | 2026-08-08 | ✅ |
+| 132203 | [흉부외과 또는 일반외과 의사 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/132203) | 미분류 | 2026-08-08 | ✅ |
 | 133024 | [인기있는 아이스크림](https://school.programmers.co.kr/learn/courses/30/lessons/133024) | 미분류 | 2026-08-08 | ✅ |
 | 133025 | [과일로 만든 아이스크림 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/133025) | 미분류 | 2026-08-08 | ✅ |
 | 144853 | [조건에 맞는 도서 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144853) | 미분류 | 2026-08-08 | ✅ |
