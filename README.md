@@ -116,6 +116,7 @@
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
 | 12909 | [올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909) | 미분류 | 2025-01-16 | ✅ |
+| 131120 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | 미분류 | 2026-08-08 | ✅ |
 | 1835 | [단체사진 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/1835) | 미분류 | 2025-06-12 | ✅ |
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
 | 42583 | [다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583) | 미분류 | 2025-01-16 | ✅ |
