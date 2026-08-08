@@ -102,6 +102,9 @@
 |---------------|--------------|----------|---------------|---------------|
 | 12906 | [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906) | 스택, 큐 | 2025-01-01 | ✅ |
 | 12982 | [예산](https://school.programmers.co.kr/learn/courses/30/lessons/12982) | 미분류 | 2025-04-25 | ✅ |
+| 132201 | [12세 이하인 여자 환자 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/132201) | 미분류 | 2026-08-08 | ✅ |
+| 133025 | [과일로 만든 아이스크림 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/133025) | 미분류 | 2026-08-08 | ✅ |
+| 144853 | [조건에 맞는 도서 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144853) | 미분류 | 2026-08-08 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
 | 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2025-05-21 | ✅ |
 | 92334 | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | 미분류 | 2025-05-30 | ✅ |
