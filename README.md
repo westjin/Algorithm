@@ -141,6 +141,7 @@
 #### Level 3
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
+| 293261 | [물고기 종류 별 대어 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/293261) | 미분류 | 2026-09-16 | ✅ |
 | 43163 | [단어 변환](https://school.programmers.co.kr/learn/courses/30/lessons/43163) | 미분류 | 2025-05-30 | ✅ |
 | 43164 | [여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164) | 미분류 | 2025-06-12 | ✅ |
 | 43238 | [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238) | 미분류 | 2025-05-19 | ✅ |
