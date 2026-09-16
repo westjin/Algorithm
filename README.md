@@ -111,6 +111,7 @@
 | 151136 | [평균 일일 대여 요금 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151136) | 미분류 | 2026-08-08 | ✅ |
 | 164673 | [조건에 부합하는 중고거래 댓글 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) | 미분류 | 2026-08-08 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
+| 59036 | [아픈 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59036) | 미분류 | 2026-09-16 | ✅ |
 | 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2025-05-21 | ✅ |
 | 92334 | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | 미분류 | 2025-05-30 | ✅ |
 
