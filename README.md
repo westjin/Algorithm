@@ -123,6 +123,7 @@
 | 131115 | [가격이 제일 비싼 식품의 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131115) | 미분류 | 2026-09-16 | ✅ |
 | 131120 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | 미분류 | 2026-08-08 | ✅ |
 | 131536 | [재구매가 일어난 상품과 회원 리스트 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131536) | 미분류 | 2026-08-08 | ✅ |
+| 144854 | [조건에 맞는 도서와 저자 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144854) | 미분류 | 2026-09-26 | ✅ |
 | 1835 | [단체사진 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/1835) | 미분류 | 2025-06-12 | ✅ |
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
 | 299310 | [연도별 대장균 크기의 편차 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299310) | 미분류 | 2026-09-16 | ✅ |
