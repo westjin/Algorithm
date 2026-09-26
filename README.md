@@ -142,6 +142,7 @@
 | 59040 | [고양이와 개는 몇 마리 있을까](https://school.programmers.co.kr/learn/courses/30/lessons/59040) | 미분류 | 2026-09-27 | ✅ |
 | 59041 | [동명 동물 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59041) | 미분류 | 2026-09-27 | ✅ |
 | 59406 | [동물 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/59406) | 미분류 | 2026-09-16 | ✅ |
+| 59412 | [입양 시각 구하기（1）](https://school.programmers.co.kr/learn/courses/30/lessons/59412) | 미분류 | 2026-09-27 | ✅ |
 | 76502 | [괄호 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/76502) | 미분류 | 2025-05-30 | ✅ |
 | 86971 | [전력망을 둘로 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/86971) | 미분류 | 2025-05-30 | ✅ |
 
