@@ -127,6 +127,7 @@
 | 132202 | [진료과별 총 예약 횟수 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/132202) | 미분류 | 2026-09-27 | ✅ |
 | 133026 | [성분으로 구분한 아이스크림 총 주문량](https://school.programmers.co.kr/learn/courses/30/lessons/133026) | 미분류 | 2026-09-27 | ✅ |
 | 144854 | [조건에 맞는 도서와 저자 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144854) | 미분류 | 2026-09-26 | ✅ |
+| 151137 | [자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151137) | 미분류 | 2026-09-27 | ✅ |
 | 1835 | [단체사진 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/1835) | 미분류 | 2025-06-12 | ✅ |
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
 | 299310 | [연도별 대장균 크기의 편차 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299310) | 미분류 | 2026-09-16 | ✅ |
