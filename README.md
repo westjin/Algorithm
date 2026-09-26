@@ -148,6 +148,7 @@
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
 | 131123 | [즐겨찾기가 가장 많은 식당 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131123) | 미분류 | 2026-09-27 | ✅ |
+| 144855 | [카테고리 별 도서 판매량 집계하기](https://school.programmers.co.kr/learn/courses/30/lessons/144855) | 미분류 | 2026-09-27 | ✅ |
 | 157340 | [자동차 대여 기록에서 대여중 ／ 대여 가능 여부 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/157340) | 미분류 | 2026-09-27 | ✅ |
 | 293261 | [물고기 종류 별 대어 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/293261) | 미분류 | 2026-09-16 | ✅ |
 | 43163 | [단어 변환](https://school.programmers.co.kr/learn/courses/30/lessons/43163) | 미분류 | 2025-05-30 | ✅ |
