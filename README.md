@@ -150,6 +150,7 @@
 | 49189 | [가장 먼 노드](https://school.programmers.co.kr/learn/courses/30/lessons/49189) | 미분류 | 2025-04-28 | ✅ |
 | 59042 | [없어진 기록 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59042) | 미분류 | 2026-09-26 | ✅ |
 | 59043 | [있었는데요 없었습니다](https://school.programmers.co.kr/learn/courses/30/lessons/59043) | 미분류 | 2026-09-26 | ✅ |
+| 59044 | [오랜 기간 보호한 동물（1）](https://school.programmers.co.kr/learn/courses/30/lessons/59044) | 미분류 | 2026-09-26 | ✅ |
 | 64064 | [불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064) | 미분류 | 2025-09-28 | ✅ |
 | 72413 | [합승 택시 요금](https://school.programmers.co.kr/learn/courses/30/lessons/72413) | 미분류 | 2025-07-03 | ✅ |
 
