@@ -134,6 +134,7 @@
 | 151137 | [자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151137) | 미분류 | 2026-09-27 | ✅ |
 | 1835 | [단체사진 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/1835) | 미분류 | 2025-06-12 | ✅ |
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
+| 273710 | [ROOT 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273710) | 미분류 | 2026-09-27 | ✅ |
 | 284527 | [조건에 맞는 사원 정보 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284527) | 미분류 | 2026-09-27 | ✅ |
 | 284531 | [노선별 평균 역 사이 거리 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284531) | 미분류 | 2026-09-27 | ✅ |
 | 293260 | [월별 잡은 물고기 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293260) | 미분류 | 2026-09-27 | ✅ |
