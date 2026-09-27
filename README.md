@@ -111,6 +111,7 @@
 | 133025 | [과일로 만든 아이스크림 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/133025) | 미분류 | 2026-08-08 | ✅ |
 | 144853 | [조건에 맞는 도서 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144853) | 미분류 | 2026-08-08 | ✅ |
 | 151136 | [평균 일일 대여 요금 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151136) | 미분류 | 2026-08-08 | ✅ |
+| 151138 | [자동차 대여 기록에서 장기／단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138) | 미분류 | 2026-09-27 | ✅ |
 | 164673 | [조건에 부합하는 중고거래 댓글 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) | 미분류 | 2026-08-08 | ✅ |
 | 293259 | [잡은 물고기의 평균 길이 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293259) | 미분류 | 2026-09-27 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
