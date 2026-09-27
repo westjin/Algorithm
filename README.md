@@ -133,6 +133,7 @@
 | 1844 | [게임 맵 최단거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | 미분류 | 2025-05-29 | ✅ |
 | 284527 | [조건에 맞는 사원 정보 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284527) | 미분류 | 2026-09-27 | ✅ |
 | 284531 | [노선별 평균 역 사이 거리 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284531) | 미분류 | 2026-09-27 | ✅ |
+| 293260 | [월별 잡은 물고기 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293260) | 미분류 | 2026-09-27 | ✅ |
 | 299310 | [연도별 대장균 크기의 편차 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299310) | 미분류 | 2026-09-16 | ✅ |
 | 42583 | [다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583) | 미분류 | 2025-01-16 | ✅ |
 | 42584 | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584) | 미분류 | 2025-01-20 | ✅ |
