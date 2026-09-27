@@ -169,6 +169,7 @@
 | 284529 | [부서별 평균 연봉 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284529) | 미분류 | 2026-09-27 | ✅ |
 | 293261 | [물고기 종류 별 대어 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/293261) | 미분류 | 2026-09-16 | ✅ |
 | 298519 | [특정 조건을 만족하는 물고기별 수와 최대 길이 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/298519) | 미분류 | 2026-09-27 | ✅ |
+| 299305 | [대장균들의 자식의 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299305) | 미분류 | 2026-09-27 | ✅ |
 | 43163 | [단어 변환](https://school.programmers.co.kr/learn/courses/30/lessons/43163) | 미분류 | 2025-05-30 | ✅ |
 | 43164 | [여행경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164) | 미분류 | 2025-06-12 | ✅ |
 | 43238 | [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238) | 미분류 | 2025-05-19 | ✅ |
