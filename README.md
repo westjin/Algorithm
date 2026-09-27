@@ -166,6 +166,7 @@
 | 144855 | [카테고리 별 도서 판매량 집계하기](https://school.programmers.co.kr/learn/courses/30/lessons/144855) | 미분류 | 2026-09-27 | ✅ |
 | 151139 | [대여 횟수가 많은 자동차들의 월별 대여 횟수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151139) | 미분류 | 2026-09-27 | ✅ |
 | 157340 | [자동차 대여 기록에서 대여중 ／ 대여 가능 여부 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/157340) | 미분류 | 2026-09-27 | ✅ |
+| 164670 | [조건에 맞는 사용자 정보 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164670) | 미분류 | 2026-09-27 | ✅ |
 | 273712 | [업그레이드 할 수 없는 아이템 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/273712) | 미분류 | 2026-09-27 | ✅ |
 | 284529 | [부서별 평균 연봉 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284529) | 미분류 | 2026-09-27 | ✅ |
 | 293261 | [물고기 종류 별 대어 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/293261) | 미분류 | 2026-09-16 | ✅ |
