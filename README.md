@@ -125,7 +125,7 @@
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
 |---------------|--------------|----------|---------------|---------------|
 | 12909 | [올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909) | 미분류 | 2025-01-16 | ✅ |
-| 131115 | [가격이 제일 비싼 식품의 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131115) | 미분류 | 2026-09-16 | ✅ |
+| 131115 | [가격이 제일 비싼 식품의 정보 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131115) | 미분류 | 2026-09-27 | ✅ |
 | 131120 | [3월에 태어난 여성 회원 목록 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131120) | 미분류 | 2026-08-08 | ✅ |
 | 131530 | [가격대 별 상품 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131530) | 미분류 | 2026-09-27 | ✅ |
 | 131533 | [상품 별 오프라인 매출 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131533) | 미분류 | 2026-09-26 | ✅ |
