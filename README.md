@@ -114,6 +114,7 @@
 | 151136 | [평균 일일 대여 요금 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151136) | 미분류 | 2026-08-08 | ✅ |
 | 151138 | [자동차 대여 기록에서 장기／단기 대여 구분하기](https://school.programmers.co.kr/learn/courses/30/lessons/151138) | 미분류 | 2026-09-27 | ✅ |
 | 164673 | [조건에 부합하는 중고거래 댓글 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) | 미분류 | 2026-08-08 | ✅ |
+| 172928 | [공원 산책](https://school.programmers.co.kr/learn/courses/30/lessons/172928) | 미분류 | 2026-09-29 | ✅ |
 | 293259 | [잡은 물고기의 평균 길이 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293259) | 미분류 | 2026-09-27 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
 | 59036 | [아픈 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59036) | 미분류 | 2026-09-16 | ✅ |
