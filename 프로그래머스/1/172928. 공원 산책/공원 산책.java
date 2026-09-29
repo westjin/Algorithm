@@ -38,94 +38,42 @@ class Solution {
             int tempX = startX;
             int tempY = startY;
             boolean status = true;
+            int[] dx = {-1,1,0,0}; // N,S,W,E
+            int[] dy = {0,0,-1,1};
+            int dir = 0;
+            if (focus.equals("N")) dir = 0;
+            else if (focus.equals("S")) dir = 1;
+            else if (focus.equals("W")) dir = 2;
+            else if (focus.equals("E")) dir = 3;
             
-            
-            
-            switch (focus){
-                case "E":
-                    for(int q = 0; q < length; q++){
-                        nextY = tempY + 1;
-                        
-                        if(nextY < 0 || nextY >= W){
-                            status = false;
-                            break;
-                        }
-                        tempY = nextY;
-                        if(map[tempX][tempY] == 'X'){
-                            status = false;
-                            break;
-                        }
-                    }
-                    if(status){
-                        startY = tempY;
-                    }
-                    break;
+            for(int j = 0; j < length; j++){
+                nextX = tempX + dx[dir];
+                nextY = tempY + dy[dir];
                 
-                case "W":
-                    for(int q = 0; q < length; q++){
-                        nextY = tempY - 1;
-                        
-                        if(nextY < 0 || nextY >= W){
-                            status = false;
-                            break;
-                        }
-                        tempY = nextY;
-                        if(map[tempX][tempY] == 'X'){
-                            status = false;
-                            break;
-                        }
-                    }
-                    if(status){
-                        startY = tempY;
-                    }
+                if(nextX < 0 || nextX >= H || nextY < 0 || nextY >= W){
+                    status = false;
                     break;
-                    
-                case "N":
-                    for(int q = 0; q < length; q++){
-                        nextX = tempX - 1;
-                        
-                        if(nextX < 0 || nextX >= W){
-                            status = false;
-                            break;
-                        }
-                        tempX = nextX;
-                        if(map[tempX][tempY] == 'X'){
-                            status = false;
-                            break;
-                        }
-                    }
-                    if(status){
-                        startX = tempX;
-                    }
+                }
+                tempX = nextX;
+                tempY = nextY;
+                
+                if(map[tempX][tempY] == 'X'){
+                    status = false;
                     break;
-                    
-                case "S":
-                    for(int q = 0; q < length; q++){
-                        nextX = tempX + 1;
-                        
-                        if(nextX < 0 || nextX >= W){
-                            status = false;
-                            break;
-                        }
-                        tempX = nextX;
-                        if(map[tempX][tempY] == 'X'){
-                            status = false;
-                            break;
-                        }
-                    }
-                    if(status){
-                        startX = tempX;
-                    }
-                    break;
-            } // switch
+                }
+                
+            }
+            
+            if(status){
+                    startX = tempX;
+                    startY = tempY;
+                }
+                     
         }
+            
         
-       answer = new int[]{startX,startY}; 
-        
-        
-        
-        
-        
+           
+        answer = new int[]{startX,startY}; 
         return answer;
     }
 }
