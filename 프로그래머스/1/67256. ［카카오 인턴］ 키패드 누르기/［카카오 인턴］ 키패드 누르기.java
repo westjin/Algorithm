@@ -1,65 +1,76 @@
+import java.io.*;
+import java.util.*;
+
 class Solution {
-    public static String solution(int[] numbers, String hand){
-        StringBuilder answer = new StringBuilder();
-        // 1. 손 위치 초기화하기
-        Position left = new Position(3,0);
-        Position right = new Position(3,2);
-        Position numPos;
-
-        for (int num : numbers) {
-            // 2. 숫자를 누를 손가락 정하기
-            numPos = new Position((num - 1) / 3,(num - 1) % 3);
-            if(num == 0){
-                numPos = new Position(3,1);
+    public String solution(int[] numbers, String hand) {
+        String answer = "";
+        StringBuilder sb = new StringBuilder();
+        
+        //1 2 3
+        //4 5 6
+        //7 8 9
+        //* 0 #
+        
+        int[][] pos = {
+            //인덱스가 숫자구나
+            {3,1}, //0
+            {0,0}, //1
+            {0,1}, //2
+            {0,2}, //3
+            {1,0}, //4
+            {1,1}, //5
+            {1,2}, //6
+            {2,0}, //7
+            {2,1}, //8
+            {2,2}, //9
+        };
+        int[] left = {3, 0};   // *
+        int[] right = {3, 2};  // #
+        
+        for(int i = 0; i < numbers.length; i++){
+            int num = numbers[i];
+            if (num == 1 || num == 4 || num == 7) {
+                // 왼손
+                sb.append("L");
+                //1에 해당하는 배열 위치로 왼손을 옮겨야 하자나
+                left = pos[num];
+            } else if (num == 3 || num == 6 || num == 9) {
+                // 오른손
+                sb.append("R");
+                right = pos[num];
+            } else {
+                // 2, 5, 8, 0 → 거리 비교
+                 int tx = pos[num][0];
+                 int ty = pos[num][1];
+                
+                int leftDist = Math.abs(left[0] - tx) + Math.abs(left[1] - ty);
+                int rightDist = Math.abs(right[0] - tx) + Math.abs(right[1] - ty);
+                
+                if(leftDist > rightDist){
+                    sb.append("R");
+                    right = pos[num];
+                }else if (leftDist < rightDist){
+                    sb.append("L");
+                    left = pos[num];
+                }else{
+                    if(hand.equals("left")){
+                        sb.append("L");
+                        left = pos[num];
+                    }else{
+                        sb.append("R");
+                        right = pos[num];
+                    }
+                }
+                               
             }
-            String finger = numPos.getFinger(hand,left,right);
-            // 3.정해진 손가락을 answer에 담고 손가락 위치 이동
-            answer.append(finger);
-            //손가락 위치 이동
-            if(finger.equals("L")){
-                left = numPos;
-            }else {
-                right = numPos;
-            }
+            
         }
-        return answer.toString();
-    }
-
-    static class Position{
-        int row;
-        int col;
-
-        Position(int row, int col){
-            this.row = row;
-            this.col = col;
-        }
-
-        public String getFinger(String hand, Position left, Position right){
-            String finger = hand.equals("right")? "R":"L";
-
-            if (this.col == 0){
-                finger = "L";
-            } else if (this.col == 2) {
-                finger = "R";
-            }
-            else {
-                int leftDist = left.getDistance(this);
-                int rightDist = right.getDistance(this);
-
-                if(leftDist < rightDist)
-                    finger = "L";
-                else if(leftDist > rightDist)
-                    finger = "R";
-            }
-
-            return finger;
-        }
-
-        public int getDistance(Position p){
-            int distance = Math.abs(this.row - p.row) + Math.abs(this.col - p.col);
-            return distance;
-        }
-
-    }
+        
+        
+        
+        
     
+        
+        return sb.toString();
+    }
 }
