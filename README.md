@@ -120,7 +120,7 @@
 | 59036 | [아픈 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59036) | 미분류 | 2026-09-16 | ✅ |
 | 59039 | [이름이 없는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59039) | 미분류 | 2026-09-27 | ✅ |
 | 59407 | [이름이 있는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59407) | 미분류 | 2026-09-27 | ✅ |
-| 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2025-05-21 | ✅ |
+| 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2026-10-02 | ✅ |
 | 92334 | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | 미분류 | 2025-05-30 | ✅ |
 
 #### Level 2
