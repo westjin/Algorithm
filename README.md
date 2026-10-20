@@ -117,6 +117,7 @@
 | 172928 | [공원 산책](https://school.programmers.co.kr/learn/courses/30/lessons/172928) | 미분류 | 2026-09-29 | ✅ |
 | 293259 | [잡은 물고기의 평균 길이 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/293259) | 미분류 | 2026-09-27 | ✅ |
 | 42748 | [K번째수](https://school.programmers.co.kr/learn/courses/30/lessons/42748) | 미분류 | 2025-02-04 | ✅ |
+| 42840 | [모의고사](https://school.programmers.co.kr/learn/courses/30/lessons/42840) | 미분류 | 2026-10-21 | ✅ |
 | 59036 | [아픈 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59036) | 미분류 | 2026-09-16 | ✅ |
 | 59039 | [이름이 없는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59039) | 미분류 | 2026-09-27 | ✅ |
 | 59407 | [이름이 있는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59407) | 미분류 | 2026-09-27 | ✅ |
