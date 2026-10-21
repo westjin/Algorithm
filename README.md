@@ -156,6 +156,7 @@
 | 42839 | [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) | 미분류 | 2025-11-19 | ✅ |
 | 42890 | [후보키](https://school.programmers.co.kr/learn/courses/30/lessons/42890) | 미분류 | 2025-12-17 | ✅ |
 | 43165 | [타겟 넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165) | 미분류 | 2025-11-19 | ✅ |
+| 49994 | [방문 길이](https://school.programmers.co.kr/learn/courses/30/lessons/49994) | 미분류 | 2026-10-22 | ✅ |
 | 59038 | [최솟값 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/59038) | 미분류 | 2026-09-16 | ✅ |
 | 59040 | [고양이와 개는 몇 마리 있을까](https://school.programmers.co.kr/learn/courses/30/lessons/59040) | 미분류 | 2026-09-27 | ✅ |
 | 59041 | [동명 동물 수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59041) | 미분류 | 2026-09-27 | ✅ |
