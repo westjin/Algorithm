@@ -122,6 +122,7 @@
 | 59036 | [아픈 동물 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59036) | 미분류 | 2026-09-16 | ✅ |
 | 59039 | [이름이 없는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59039) | 미분류 | 2026-09-27 | ✅ |
 | 59407 | [이름이 있는 동물의 아이디](https://school.programmers.co.kr/learn/courses/30/lessons/59407) | 미분류 | 2026-09-27 | ✅ |
+| 64061 | [크레인 인형뽑기 게임](https://school.programmers.co.kr/learn/courses/30/lessons/64061) | 미분류 | 2026-10-23 | ✅ |
 | 67256 | [［카카오 인턴］ 키패드 누르기](https://school.programmers.co.kr/learn/courses/30/lessons/67256) | 미분류 | 2026-10-02 | ✅ |
 | 68644 | [두 개 뽑아서 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/68644) | 미분류 | 2026-10-20 | ✅ |
 | 92334 | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | 미분류 | 2025-05-30 | ✅ |
