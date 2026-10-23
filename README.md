@@ -191,4 +191,5 @@
 | 59044 | [오랜 기간 보호한 동물（1）](https://school.programmers.co.kr/learn/courses/30/lessons/59044) | 미분류 | 2026-09-26 | ✅ |
 | 64064 | [불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064) | 미분류 | 2025-09-28 | ✅ |
 | 72413 | [합승 택시 요금](https://school.programmers.co.kr/learn/courses/30/lessons/72413) | 미분류 | 2025-07-03 | ✅ |
+| 81303 | [표 편집](https://school.programmers.co.kr/learn/courses/30/lessons/81303) | 미분류 | 2026-10-24 | ✅ |
 
