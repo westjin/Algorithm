@@ -152,7 +152,7 @@
 | 299310 | [연도별 대장균 크기의 편차 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/299310) | 미분류 | 2026-09-16 | ✅ |
 | 42583 | [다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583) | 미분류 | 2025-01-16 | ✅ |
 | 42584 | [주식가격](https://school.programmers.co.kr/learn/courses/30/lessons/42584) | 미분류 | 2026-10-23 | ✅ |
-| 42586 | [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586) | 스택, 큐, 구현 | 2025-01-02 | ✅ |
+| 42586 | [기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586) | 스택, 큐, 구현 | 2026-10-24 | ✅ |
 | 42587 | [프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587) | 미분류 | 2025-01-20 | ✅ |
 | 42839 | [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) | 미분류 | 2025-11-19 | ✅ |
 | 42890 | [후보키](https://school.programmers.co.kr/learn/courses/30/lessons/42890) | 미분류 | 2025-12-17 | ✅ |
