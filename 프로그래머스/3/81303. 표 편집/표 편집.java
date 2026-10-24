@@ -1,67 +1,80 @@
+import java.io.*;
 import java.util.*;
 
 class Solution {
     public String solution(int n, int k, String[] cmd) {
         
-        //표의 행 개수 : n 
-        // 선택된 행의 위치 : k
-        // 삭제
-        //복구
-        Stack<Integer> deleted = new Stack<>();
         
+        // 업,다운 배열을 만든다 현재 행에 대한 위, 아래 정보를 담자
         int[] up = new int[n+2];
         int[] down = new int[n+2];
         
-        for(int i = 0; i < n + 2; i++){
+        //삭제된 배열들을 담을 스택
+        Deque<Integer> delete = new ArrayDeque<>();
+        
+        //현재 위치에 대한 값들 연결
+        
+        for(int i = 0; i < n+2; i++){
             up[i] = i - 1;
             down[i] = i + 1;
         }
         
-        k++;  
+        k++; // 위 아래로 행이 하나씩 늘어났음
         
-        for (String c : cmd){
-            
-            if(c.startsWith("C")) {
-                
-                deleted.push(k);
+        
+        for(String c : cmd){
+            // 1. 삭제하는 경우
+            if(c.equals("C")){
+                delete.push(k);
                 up[down[k]] = up[k];
                 down[up[k]] = down[k];
                 
-                k = n < down[k] ? up[k] : down[k];
+                 if(down[k] > n){
+                     k = up[k];
+                 }else{
+                     k = down[k];
+                 }
             }
             
-            else if (c.startsWith("Z")) {
+            //되돌리는 경우
+            else if(c.equals("Z")){
+                int restore = delete.pop();
                 
-                int restore = deleted.pop();
-                down[up[restore]] = restore;
                 up[down[restore]] = restore;
+                down[up[restore]] = restore;
+                
             }
             
             else{
-                String[] s = c.split(" ");
-                int x = Integer.parseInt(s[1]);
-                for(int i = 0; i < x; i++){
-                    k = s[0].equals("U") ? up[k] : down[k];
+                StringTokenizer st = new StringTokenizer(c);
+                String move = st.nextToken();
+                int num = Integer.parseInt(st.nextToken());
+                
+                for(int i = 0; i < num; i++){
+
+                if (move.equals("U")){
+                    k = up[k];
+                }else{
+                    k = down[k];
+                }   
+                    
                 }
             }
+            
         }
+
         
-        
-        // 삭제된 행의 위치에 X
         char[] answer = new char[n];
-        Arrays.fill(answer, 'O');
-        
-        for(int i : deleted){
-            answer[i-1] = 'X';
-        }
-        
+            
+            Arrays.fill(answer,'O');
+            
+            for(int number : delete){
+                answer[number - 1] = 'X';
+            }
         
         return new String(answer);
         
-        
-        
-        
-        
-        
     }
+        
+
 }
