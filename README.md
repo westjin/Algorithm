@@ -167,6 +167,7 @@
 | 59412 | [입양 시각 구하기（1）](https://school.programmers.co.kr/learn/courses/30/lessons/59412) | 미분류 | 2026-09-27 | ✅ |
 | 76502 | [괄호 회전하기](https://school.programmers.co.kr/learn/courses/30/lessons/76502) | 미분류 | 2025-05-30 | ✅ |
 | 86971 | [전력망을 둘로 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/86971) | 미분류 | 2025-05-30 | ✅ |
+| 87390 | [n＾2 배열 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/87390) | 미분류 | 2026-10-25 | ✅ |
 
 #### Level 3
 | **문제 번호** | **문제 이름** | **분류** | **풀이 날짜** | **해결 여부** |
